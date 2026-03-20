@@ -1,4 +1,4 @@
-const Service = require("../services/comment");
+const Service = require("../services/Comment");
 
 const createNew = async (req, res) => {
   try {
