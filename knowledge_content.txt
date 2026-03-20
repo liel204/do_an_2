@@ -1,0 +1,73 @@
+# Chính Sách Vận Chuyển và Giao Hàng
+
+## Phí Vận Chuyển
+- **Miễn phí vận chuyển**: Đơn hàng từ 500.000 VNĐ trở lên được miễn phí vận chuyển toàn quốc.
+- **Phí vận chuyển tiêu chuẩn**: 30.000 VNĐ cho đơn hàng dưới 500.000 VNĐ.
+- **Vận chuyển nhanh**: 50.000 VNĐ, giao trong 2-4 giờ tại khu vực nội thành.
+- **Vận chuyển hỏa tốc**: 100.000 VNĐ, giao trong 1 giờ tại khu vực nội thành.
+
+## Thời Gian Giao Hàng
+- **Nội thành**: 1-2 ngày làm việc.
+- **Liên tỉnh**: 2-5 ngày làm việc.
+- **Vùng sâu vùng xa**: 3-7 ngày làm việc.
+
+## Phương Thức Thanh Toán
+- Thanh toán khi nhận hàng (COD).
+- Chuyển khoản ngân hàng.
+- Ví điện tử (Momo, ZaloPay, ViettelPay).
+
+# Chính Sách Đổi Trả Hàng Hóa
+
+## Điều Kiện Đổi Trả
+- Sản phẩm còn nguyên vẹn, chưa sử dụng, còn tem mác.
+- Thời hạn đổi trả: 7 ngày kể từ ngày nhận hàng.
+- Hóa đơn mua hàng còn nguyên.
+
+## Trường Hợp Không Đổi Trả
+- Sản phẩm đã qua sử dụng.
+- Sản phẩm bị hư hỏng do người dùng.
+- Quá thời hạn 7 ngày.
+
+## Quy Trình Đổi Trả
+1. Liên hệ bộ phận chăm sóc khách hàng.
+2. Gửi sản phẩm về kho.
+3. Nhận sản phẩm mới hoặc hoàn tiền trong 3-5 ngày làm việc.
+
+# Tư Vấn Mặt Hàng
+
+## Danh Mục Sản Phẩm
+Chúng tôi cung cấp các loại sản phẩm công nghệ chất lượng cao:
+- Máy tính xách tay
+- Điện thoại thông minh
+- Máy tính bảng
+- Phụ kiện công nghệ
+- Thiết bị gia dụng thông minh
+
+## Tư Vấn Theo Nhu Cầu
+- **Cho công việc**: Máy tính xách tay với RAM 16GB+, SSD 512GB+.
+- **Cho học tập**: Máy tính bảng với màn hình lớn, thời lượng pin dài.
+- **Cho giải trí**: Điện thoại flagship với camera chất lượng cao.
+
+# Tư Vấn Loại Máy
+
+## Máy Tính Xách Tay
+- **Gaming**: RTX 4060+, RAM 16GB, màn hình 144Hz.
+- **Văn phòng**: Intel Core i5, RAM 8GB, SSD 256GB.
+- **Ultrabook**: Nhẹ dưới 1.5kg, thời lượng pin 10+ giờ.
+
+## Điện Thoại Thông Minh
+- **Flagship**: Snapdragon 8 Gen 3, camera 200MP, sạc nhanh 100W.
+- **Mid-range**: Snapdragon 7 Gen 2, camera 108MP, pin 5000mAh.
+- **Budget**: Snapdragon 6 Gen 1, camera 50MP, giá dưới 5 triệu.
+
+## Máy Tính Bảng
+- **Android**: Google Pixel Tablet, hỗ trợ stylus.
+- **iPad**: iPad Pro với M2 chip, màn hình Liquid Retina.
+- **Windows**: Surface Pro, có thể thay thế laptop.
+
+## Lưu Ý Khi Chọn Mua
+- Xác định nhu cầu sử dụng.
+- So sánh cấu hình và giá cả.
+- Kiểm tra chính sách bảo hành.
+- Đọc đánh giá từ người dùng.</content>
+<parameter name="filePath">c:\Users\ASUS\Desktop\NguyenRoliel_224499_DoAn2\NguyenRoliel_224499_DoAn2\NguyenRoliel_224499_DoAn2\knowledge_content.txt
