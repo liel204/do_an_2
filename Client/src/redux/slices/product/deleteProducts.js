@@ -5,7 +5,7 @@ export const deleteProduct = createAsyncThunk(
   "categorys/deleteProduct",
   async ({ id }) => {
     const response = await axios.delete(
-      `http://localhost:8000/api/ProductRouter/deleteObj?id=${id}`
+      `https://do-an-2-tffk.onrender.com/api/ProductRouter/deleteObj?id=${id}`
     );
     return response;
   }

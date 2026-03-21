@@ -5,7 +5,7 @@ export const getImageWithColor = createAsyncThunk(
   "options/getImageWithColor",
   async ({ id }) => {
     const response = await axios.get(
-      `http://localhost:8000/api/optionRouter/getImageWithColor?id=${id}`
+      `https://do-an-2-tffk.onrender.com/api/optionRouter/getImageWithColor?id=${id}`
     );
     return response.data.data;
   }

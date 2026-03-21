@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const createRAM = createAsyncThunk("options/createRAM", async (obj) => {
   const response = await axios.post(
-    "http://localhost:8000/api/optionRouter/addnewRAM",
+    "https://do-an-2-tffk.onrender.com/api/optionRouter/addnewRAM",
     obj
   );
   return response;

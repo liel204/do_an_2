@@ -37,7 +37,7 @@ const ChatWidget = () => {
         setIsLoading(true);
 
         try {
-            const res = await axios.post('http://localhost:8000/api/chatbot/ask', {
+            const res = await axios.post('https://do-an-2-tffk.onrender.com/api/chatbot/ask', {
                 question: userMsg.text,
                 sessionId: sessionId
             });

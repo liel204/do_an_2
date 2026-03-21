@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const getAllUsers = createAsyncThunk("users/getAllUsers", async () => {
   const response = await axios.get(
-    "http://localhost:8000/api/userRouter/getAll"
+    "https://do-an-2-tffk.onrender.com/api/userRouter/getAll"
   );
 
   return response.data.data;

@@ -15,7 +15,7 @@ export const createOder = createAsyncThunk(
     Oder_Status,
   }) => {
     const temp = await axios.get(
-      `http://localhost:8000/api/CartItemRouter/getDetail?id=${CartItemID}`
+      `https://do-an-2-tffk.onrender.com/api/CartItemRouter/getDetail?id=${CartItemID}`
     );
     const obj = {
       Oder_TotalPrice: temp.data.data[0].TotalPriceItem,
@@ -32,7 +32,7 @@ export const createOder = createAsyncThunk(
     };
     console.log("first", obj);
     const response = await axios.post(
-      "http://localhost:8000/api/OderRouter/addnew",
+      "https://do-an-2-tffk.onrender.com/api/OderRouter/addnew",
       obj
     );
     console.log("first", response);

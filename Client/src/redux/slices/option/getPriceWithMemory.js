@@ -5,7 +5,7 @@ export const getPriceWithMemory = createAsyncThunk(
   "options/getPriceWithMemory",
   async ({ id }) => {
     const response = await axios.get(
-      `http://localhost:8000/api/optionRouter/getPriceWithMemory?id=${id}`
+      `https://do-an-2-tffk.onrender.com/api/optionRouter/getPriceWithMemory?id=${id}`
     );
     return response.data.data;
   }

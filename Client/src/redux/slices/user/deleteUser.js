@@ -5,7 +5,7 @@ export const deleteUser = createAsyncThunk(
   "categorys/deleteUser",
   async ({ id }) => {
     const response = await axios.delete(
-      `http://localhost:8000/api/userRouter/deleteObj?id=${id}`
+      `https://do-an-2-tffk.onrender.com/api/userRouter/deleteObj?id=${id}`
     );
     return response;
   }

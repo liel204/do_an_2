@@ -16,8 +16,8 @@ const App = (props) => {
         try {
             const response = await
                 axios.get(paymentId === "" ?
-                    `http://localhost:8000/api/AdminStatisticalRouter/supportUserTable?userId=${userId}` :
-                    `http://localhost:8000/api/AdminStatisticalRouter/supportUserTable?userId=${userId}&paymentId=${paymentId}`);
+                    `https://do-an-2-tffk.onrender.com/api/AdminStatisticalRouter/supportUserTable?userId=${userId}` :
+                    `https://do-an-2-tffk.onrender.com/api/AdminStatisticalRouter/supportUserTable?userId=${userId}&paymentId=${paymentId}`);
             setData(response.data.data);
         } catch (error) {
             console.log(error.message);

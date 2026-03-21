@@ -6,7 +6,7 @@ export const addNewPayment = createAsyncThunk(
   "users/addNewPayment",
   async ({ id, Oder_TotalPrice, Payment_Method }) => {
     const response = await axios.post(
-      "http://localhost:8000/api/PaymentRouter/addnew",
+      "https://do-an-2-tffk.onrender.com/api/PaymentRouter/addnew",
       {
         id: id,
         Payment_Method: Payment_Method,
@@ -22,7 +22,7 @@ export const getPrice = createAsyncThunk(
   "users/getPrice",
   async (app_trans_id) => {
     const response = await axios.post(
-      "http://localhost:8000/api/OderRouter/getSumForPayment",
+      "https://do-an-2-tffk.onrender.com/api/OderRouter/getSumForPayment",
       {
         app_trans_id: parseInt(app_trans_id),
       }

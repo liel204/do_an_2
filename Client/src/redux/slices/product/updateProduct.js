@@ -6,7 +6,7 @@ export const updateProduct = createAsyncThunk(
   async (obj) => {
     console.log("first", obj);
     const response = await axios.put(
-      "http://localhost:8000/api/ProductRouter/updateObj",
+      "https://do-an-2-tffk.onrender.com/api/ProductRouter/updateObj",
       obj
     );
     return response;

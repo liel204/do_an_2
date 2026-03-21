@@ -9,7 +9,7 @@ const ChatHistory = () => {
     const fetchData = async () => {
         setLoading(true);
         try {
-            const res = await axios.get("http://localhost:8000/api/chatbot/history");
+            const res = await axios.get("https://do-an-2-tffk.onrender.com/api/chatbot/history");
             setData(res.data.data);
         } catch (error) {
             message.error("Lỗi lấy dữ liệu lịch sử");

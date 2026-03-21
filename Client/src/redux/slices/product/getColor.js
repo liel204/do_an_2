@@ -9,11 +9,11 @@ const initialState = {
 
 export const getColor = createAsyncThunk("products/getColor", async (id) => {
   const res = await axios.get(
-    `http://localhost:8000/api/productRouter/getDetail?id=${id}`
+    `https://do-an-2-tffk.onrender.com/api/productRouter/getDetail?id=${id}`
   );
   const Product_Name = res.data.data.Product_Name;
   const response = await axios.get(
-    `http://localhost:8000/api/productRouter/getColor?Product_Name="${Product_Name}"`
+    `https://do-an-2-tffk.onrender.com/api/productRouter/getColor?Product_Name="${Product_Name}"`
   );
   return response.data.data;
 });

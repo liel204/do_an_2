@@ -9,7 +9,7 @@ const Dashboard = () => {
     const [data, setData] = useState([]);
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/AdminStatisticalRouter/userRankTable');
+            const response = await axios.get('https://do-an-2-tffk.onrender.com/api/AdminStatisticalRouter/userRankTable');
             setData(response.data.data);
         } catch (error) {
             console.log(error.message);

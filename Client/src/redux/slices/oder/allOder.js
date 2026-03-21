@@ -4,7 +4,7 @@ import { jwtDecode } from "jwt-decode";
 
 export const getAllOder = createAsyncThunk("oders/getAllOder", async () => {
   const response = await axios.get(
-    `http://localhost:8000/api/OderRouter/getAll?UserID=${
+    `https://do-an-2-tffk.onrender.com/api/OderRouter/getAll?UserID=${
       jwtDecode(localStorage.getItem("token")).id
     }`
   );

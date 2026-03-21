@@ -9,7 +9,7 @@ const App = () => {
     const [changeData, setChangeData] = useState(null);
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/AdminStatisticalRouter/orderRankTable');
+            const response = await axios.get('https://do-an-2-tffk.onrender.com/api/AdminStatisticalRouter/orderRankTable');
             setTemp(response.data.data);
         } catch (error) {
             console.log(error.message);

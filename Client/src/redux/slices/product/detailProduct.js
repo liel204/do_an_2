@@ -11,7 +11,7 @@ export const getDetailProduct = createAsyncThunk(
   "products/getDetailProduct",
   async (id) => {
     const response = await axios.get(
-      `http://localhost:8000/api/productRouter/getDetail?id=${id}`
+      `https://do-an-2-tffk.onrender.com/api/productRouter/getDetail?id=${id}`
     );
     return response.data.data;
   }

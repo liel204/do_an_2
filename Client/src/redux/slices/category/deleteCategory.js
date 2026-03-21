@@ -6,7 +6,7 @@ export const deleteCategory = createAsyncThunk(
   "categorys/deleteCategory",
   async ({ id }) => {
     const response = await axios.delete(
-      `http://localhost:8000/api/CategoryRouter/deleteObj?id=${id}`,
+      `https://do-an-2-tffk.onrender.com/api/CategoryRouter/deleteObj?id=${id}`,
       {
         headers: {
           token: jwtDecode(localStorage.getItem("token")).User_Role,

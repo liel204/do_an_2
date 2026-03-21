@@ -20,7 +20,7 @@ const Order = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:8000/api/OderRouter/deleteObj?id=${id}`);
+            const response = await axios.delete(`https://do-an-2-tffk.onrender.com/api/OderRouter/deleteObj?id=${id}`);
             if (response.data.message) {
                 toast.success("Success");
                 dispatch(getAllOder());

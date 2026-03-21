@@ -16,7 +16,7 @@ export const createCart = createAsyncThunk(
     };
     console.log("first", obj);
     const response = await axios.post(
-      "http://localhost:8000/api/cartItemRouter/addnew",
+      "https://do-an-2-tffk.onrender.com/api/cartItemRouter/addnew",
       obj
     );
     if (response.data.message === "Create successful") {

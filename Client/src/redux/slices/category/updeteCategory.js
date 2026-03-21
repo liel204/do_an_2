@@ -6,7 +6,7 @@ export const updateCategory = createAsyncThunk(
   "categorys/updateCategory",
   async ({ id, Category_Name }) => {
     const response = await axios.put(
-      "http://localhost:8000/api/CategoryRouter/updateObj?id=1",
+      "https://do-an-2-tffk.onrender.com/api/CategoryRouter/updateObj?id=1",
       {
         id: id,
         Category_Name: Category_Name,

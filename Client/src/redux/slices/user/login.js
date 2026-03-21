@@ -5,7 +5,7 @@ import { getLoginForRedux } from "./loginForRedux";
 
 export const loginUser = createAsyncThunk("users/login", async (obj) => {
   const res = await axios.post(
-    `http://localhost:8000/api/userRouter/loginUser`,
+    `https://do-an-2-tffk.onrender.com/api/userRouter/loginUser`,
     {
       User_Email: obj.email,
       User_Password: obj.pass,

@@ -4,7 +4,7 @@ import { jwtDecode } from "jwt-decode";
 
 export const getAllCart = createAsyncThunk("carts/getAllCart", async () => {
   const response = await axios.get(
-    `http://localhost:8000/api/cartItemRouter/getAll?UserID=${
+    `https://do-an-2-tffk.onrender.com/api/cartItemRouter/getAll?UserID=${
       jwtDecode(localStorage.getItem("token")).id
     }`
   );
@@ -13,7 +13,7 @@ export const getAllCart = createAsyncThunk("carts/getAllCart", async () => {
 
 export const getPrice = createAsyncThunk("carts/getPrice", async (id) => {
   const response = await axios.get(
-    `http://localhost:8000/api/CartItemRouter/getPrice?id=${id}`
+    `https://do-an-2-tffk.onrender.com/api/CartItemRouter/getPrice?id=${id}`
   );
   return response;
 });

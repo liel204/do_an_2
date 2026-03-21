@@ -7,7 +7,7 @@ export const createComent = createAsyncThunk(
   async (obj) => {
     obj.UserID = jwtDecode(localStorage.getItem("token")).id;
     const response = await axios.post(
-      "http://localhost:8000/api/comentRouter/addnew",
+      "https://do-an-2-tffk.onrender.com/api/comentRouter/addnew",
       obj
     );
     return response;

@@ -5,7 +5,7 @@ export const getAllProducts = createAsyncThunk(
   "products/getAllProducts",
   async () => {
     const response = await axios.get(
-      "http://localhost:8000/api/productRouter/getAll"
+      "https://do-an-2-tffk.onrender.com/api/productRouter/getAll"
     );
 
     return response.data.data;
