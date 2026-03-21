@@ -86,10 +86,10 @@ npm install
 npm start
 
 💡 Cấu Trúc Database Cốt Lõi (Chatbot & Users)
-knowledges & knowledge_chunks: Lưu trữ tài liệu kiến thức (txt, pdf) và phân mảnh (chunk) văn bản phục vụ cho Embedding.
+knowledges & knowledge_chunks: Lưu trữ tài liệu kiến thức (txt, pdf, docx) và phân mảnh (chunk) văn bản phục vụ cho Embedding.
 chat_histories: Lưu trữ phiên hỏi đáp và thời gian phản hồi của chatbot AI.
 roles & user_roles: Đảm nhiệm việc phân quyền người dùng. Hệ thống hỗ trợ Admin, Staff và Customer.
 Message: Lưu trữ tin nhắn Real-time.
 
 👨‍💻 Tác giả / Nhóm Đồ án
-Phát triển bởi Nguyễn Roliel (224499) phục vụ Đồ án 2 và học thuật mở về hệ thống thương mại điện tử chuyên cung cấp thiết bị công nghệ (điện thoại, laptop). Vui lòng tham khảo mã nguồn các thành phần cốt lõi như hệ thống Trợ lý ảo AI Chatbot (RAG với ChromaDB & Groq), tính năng Live Chat Real-time (Socket.IO) và quản lý trạng thái giỏ hàng (Redux Toolkit) ở lịch sử Commit chi tiết.
+Phát triển bởi Nguyễn Roliel (224499) phục vụ Đồ án 2 và học thuật mở về hệ thống thương mại điện tử chuyên cung cấp thiết bị công nghệ (điện thoại, ). Vui lòng tham khảo mã nguồn các thành phần cốt lõi như hệ thống Trợ lý ảo AI Chatbot (RAG với ChromaDB & Groq), tính năng Live Chat Real-time (Socket.IO) và quản lý trạng thái giỏ hàng (Redux Toolkit) ở lịch sử Commit chi tiết.
