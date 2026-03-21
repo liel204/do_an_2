@@ -5,7 +5,7 @@ export const createProduct = createAsyncThunk(
   "options/createProduct",
   async (obj) => {
     const response = await axios.post(
-      "https://do-an-2-tffk.onrender.com/api/ProductRouter/addnew",
+      `${process.env.REACT_APP_API_URL}/api/ProductRouter/addnew`,
       obj
     );
     return response;

@@ -5,7 +5,7 @@ export const resetDetailProduct = createAsyncThunk(
   "products/resetDetailProduct",
   async ({ Product_Color, Product_Memory, Product_Name }) => {
     const response = await axios.get(
-      `https://do-an-2-tffk.onrender.com/api/ProductRouter/findIdProduct?Product_Color=${Product_Color}&Product_Memory=${Product_Memory}&Product_Name=${Product_Name}`
+      `${process.env.REACT_APP_API_URL}/api/ProductRouter/findIdProduct?Product_Color=${Product_Color}&Product_Memory=${Product_Memory}&Product_Name=${Product_Name}`
     );
     return response.data.data[0].id;
   }

@@ -5,7 +5,7 @@ export const getAllMemory = createAsyncThunk(
   "options/getAllMemory",
   async (productID) => {
     const response = await axios.get(
-      `https://do-an-2-tffk.onrender.com/api/optionRouter/getAllMemory?id=${productID}`
+      `${process.env.REACT_APP_API_URL}/api/optionRouter/getAllMemory?id=${productID}`
     );
     return response.data.data;
   }

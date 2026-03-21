@@ -5,7 +5,7 @@ export const updateUser = createAsyncThunk(
   "categorys/updateUser",
   async (obj) => {
     const response = await axios.put(
-      "https://do-an-2-tffk.onrender.com/api/userRouter/updateObj",
+      `${process.env.REACT_APP_API_URL}/api/userRouter/updateObj`,
       obj
     );
     return response;

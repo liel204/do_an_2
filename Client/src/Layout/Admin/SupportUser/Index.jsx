@@ -16,8 +16,8 @@ const App = (props) => {
         try {
             const response = await
                 axios.get(paymentId === "" ?
-                    `https://do-an-2-tffk.onrender.com/api/AdminStatisticalRouter/supportUserTable?userId=${userId}` :
-                    `https://do-an-2-tffk.onrender.com/api/AdminStatisticalRouter/supportUserTable?userId=${userId}&paymentId=${paymentId}`);
+                    `${process.env.REACT_APP_API_URL}/api/AdminStatisticalRouter/supportUserTable?userId=${userId}` :
+                    `${process.env.REACT_APP_API_URL}/api/AdminStatisticalRouter/supportUserTable?userId=${userId}&paymentId=${paymentId}`);
             setData(response.data.data);
         } catch (error) {
             console.log(error.message);

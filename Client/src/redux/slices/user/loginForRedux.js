@@ -7,7 +7,7 @@ export const getLoginForRedux = createAsyncThunk(
   async (obj) => {
     let decoded = jwtDecode(obj);
     const res = await axios.get(
-      `https://do-an-2-tffk.onrender.com/api/userRouter/getDetail?id=${decoded.id}`
+      `${process.env.REACT_APP_API_URL}/api/userRouter/getDetail?id=${decoded.id}`
     );
     return res.data.data;
   }

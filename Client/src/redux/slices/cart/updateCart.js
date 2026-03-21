@@ -10,7 +10,7 @@ export const updateCart = createAsyncThunk(
     };
     console.log("first", obj);
     const response = await axios.put(
-      "https://do-an-2-tffk.onrender.com/api/CartItemRouter/updateObj",
+      `${process.env.REACT_APP_API_URL}/api/CartItemRouter/updateObj`,
       obj
     );
     console.log("first", response.data.data);
@@ -26,7 +26,7 @@ export const updateCartStatus = createAsyncThunk(
       id: id,
     };
     const response = await axios.put(
-      "https://do-an-2-tffk.onrender.com/api/CartItemRouter/updateStatusObj",
+      `${process.env.REACT_APP_API_URL}/api/CartItemRouter/updateStatusObj`,
       obj
     );
     return response.data.data;

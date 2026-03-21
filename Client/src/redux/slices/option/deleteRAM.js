@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const deleteRAM = createAsyncThunk("options/deleteRAM", async (obj) => {
   const response = await axios.delete(
-    `https://do-an-2-tffk.onrender.com/api/optionRouter/deleteRAM?id=${obj}`
+    `${process.env.REACT_APP_API_URL}/api/optionRouter/deleteRAM?id=${obj}`
   );
   return response;
 });

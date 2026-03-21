@@ -14,7 +14,7 @@ const fetchProductById = async (id) => {
   
   // --- CODE MỚI (GỌI API THỰC TẾ) ---
   // Thay đổi URL dưới đây thành địa chỉ API backend thực tế của bạn
-  const response = await fetch(`https://do-an-2-tffk.onrender.com/api/products/${id}`);
+  const response = await fetch(`${process.env.REACT_APP_API_URL}/api/products/${id}`);
   if (!response.ok) {
      throw new Error('Network response was not ok');
   }

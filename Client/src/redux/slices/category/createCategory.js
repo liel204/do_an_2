@@ -6,7 +6,7 @@ export const createCategory = createAsyncThunk(
   "categorys/createCategory",
   async ({ Category_Name }) => {
     const response = await axios.post(
-      "https://do-an-2-tffk.onrender.com/api/CategoryRouter/addnew",
+      `${process.env.REACT_APP_API_URL}/api/CategoryRouter/addnew`,
       {
         Category_Name: Category_Name,
       },

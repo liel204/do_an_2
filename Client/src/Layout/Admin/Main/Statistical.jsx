@@ -20,7 +20,7 @@ const Dashboard = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('https://do-an-2-tffk.onrender.com/api/AdminStatisticalRouter/mainRankTable');
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/AdminStatisticalRouter/mainRankTable`);
             setData(response.data.data);
         } catch (error) {
             console.log(error.message);

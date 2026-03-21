@@ -26,7 +26,7 @@ function ImageUpload() {
 
         try {
             setUploadStatus("Uploading...");
-            const response = await fetch('https://do-an-2-tffk.onrender.com/api/optionRouter/addnewColor', {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/optionRouter/addnewColor`, {
                 method: 'POST',
                 body: formData,
             });

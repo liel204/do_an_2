@@ -5,7 +5,7 @@ export const detailColor = createAsyncThunk(
   "options/detailColor",
   async (id) => {
     const response = await axios.get(
-      `https://do-an-2-tffk.onrender.com/api/optionRouter/detailColor?id=${id}`
+      `${process.env.REACT_APP_API_URL}/api/optionRouter/detailColor?id=${id}`
     );
     return response;
   }

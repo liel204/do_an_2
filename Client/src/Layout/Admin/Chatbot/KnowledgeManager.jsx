@@ -18,7 +18,7 @@ const KnowledgeManager = () => {
     const fetchData = async () => {
         setLoading(true);
         try {
-            const res = await axios.get("https://do-an-2-tffk.onrender.com/api/knowledge");
+            const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/knowledge`);
             setData(res.data.data);
         } catch (error) {
             message.error("Lỗi lấy dữ liệu kiến thức");
@@ -32,7 +32,7 @@ const KnowledgeManager = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`https://do-an-2-tffk.onrender.com/api/knowledge/${id}`);
+            await axios.delete(`${process.env.REACT_APP_API_URL}/api/knowledge/${id}`);
             message.success("Xóa thành công!");
             fetchData();
         } catch (error) {
@@ -61,7 +61,7 @@ const KnowledgeManager = () => {
 
         setUploading(true);
         try {
-            await axios.post("https://do-an-2-tffk.onrender.com/api/knowledge/upload", formData, {
+            await axios.post(`${process.env.REACT_APP_API_URL}/api/knowledge/upload`, formData, {
                 headers: { "Content-Type": "multipart/form-data" }
             });
             message.success("Thêm kiến thức thành công!");

@@ -5,7 +5,7 @@ export const getAllCategory = createAsyncThunk(
   "categorys/getAllCategory",
   async () => {
     const response = await axios.get(
-      "https://do-an-2-tffk.onrender.com/api/CategoryRouter/getAll"
+      `${process.env.REACT_APP_API_URL}/api/CategoryRouter/getAll`
     );
     return response.data.data;
   }

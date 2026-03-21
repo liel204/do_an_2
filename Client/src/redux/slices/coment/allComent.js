@@ -5,7 +5,7 @@ export const getAllComent = createAsyncThunk(
   "categorys/getAllComent",
   async (ProductID) => {
     const response = await axios.get(
-      `https://do-an-2-tffk.onrender.com/api/comentRouter/getAll?ProductID=${ProductID}`
+      `${process.env.REACT_APP_API_URL}/api/comentRouter/getAll?ProductID=${ProductID}`
     );
     return response;
   }

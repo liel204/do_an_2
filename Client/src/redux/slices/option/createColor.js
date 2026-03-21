@@ -5,7 +5,7 @@ export const createColor = createAsyncThunk(
   "options/createColor",
   async (obj) => {
     const response = await axios.put(
-      "https://do-an-2-tffk.onrender.com/api/optionRouter/addnewColor",
+      `${process.env.REACT_APP_API_URL}/api/optionRouter/addnewColor`,
       obj,
       {
         headers: {

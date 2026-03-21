@@ -5,7 +5,7 @@ export const deleteColor = createAsyncThunk(
   "options/deleteColor",
   async (obj) => {
     const response = await axios.delete(
-      `https://do-an-2-tffk.onrender.com/api/optionRouter/deleteColor?id=${obj}`
+      `${process.env.REACT_APP_API_URL}/api/optionRouter/deleteColor?id=${obj}`
     );
     return response;
   }

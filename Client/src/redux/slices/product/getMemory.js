@@ -9,11 +9,11 @@ const initialState = {
 
 export const getMemory = createAsyncThunk("products/getMemory", async (id) => {
   const res = await axios.get(
-    `https://do-an-2-tffk.onrender.com/api/productRouter/getDetail?id=${id}`
+    `${process.env.REACT_APP_API_URL}/api/productRouter/getDetail?id=${id}`
   );
   const Product_Name = res.data.data.Product_Name;
   const response = await axios.get(
-    `https://do-an-2-tffk.onrender.com/api/productRouter/getMemory?Product_Name="${Product_Name}"`
+    `${process.env.REACT_APP_API_URL}/api/productRouter/getMemory?Product_Name="${Product_Name}"`
   );
   return response.data.data;
 });

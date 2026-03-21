@@ -10,7 +10,7 @@ const Dashboard = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('https://do-an-2-tffk.onrender.com/api/AdminStatisticalRouter/categoryRankTable');
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/AdminStatisticalRouter/categoryRankTable`);
             setData(response.data.data);
         } catch (error) {
             console.log(error.message);

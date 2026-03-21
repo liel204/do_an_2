@@ -5,7 +5,7 @@ import { getLoginForRedux } from "./loginForRedux";
 
 export const logoutUser = createAsyncThunk("users/logout", async () => {
   const res = await axios.post(
-    `https://do-an-2-tffk.onrender.com/api/userRouter/logoutUser`
+    `${process.env.REACT_APP_API_URL}/api/userRouter/logoutUser`
   );
   if (res.data.status === "OK") {
     localStorage.setItem("Signinhere", localStorage.getItem("token"));

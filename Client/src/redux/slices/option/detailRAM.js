@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const detailRAM = createAsyncThunk("options/detailRAM", async (id) => {
   const response = await axios.get(
-    `https://do-an-2-tffk.onrender.com/api/optionRouter/detailRAM?id=${id}`
+    `${process.env.REACT_APP_API_URL}/api/optionRouter/detailRAM?id=${id}`
   );
   return response;
 });

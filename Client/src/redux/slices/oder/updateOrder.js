@@ -5,7 +5,7 @@ export const updateOrder = createAsyncThunk(
   "options/updateOrder",
   async (obj) => {
     const response = await axios.put(
-      `https://do-an-2-tffk.onrender.com/api/OderRouter/updateObj`,
+      `${process.env.REACT_APP_API_URL}/api/OderRouter/updateObj`,
       obj
     );
     return response;
