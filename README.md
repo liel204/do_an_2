@@ -1,95 +1,130 @@
-🛒 wibsite cửa hàng điện thoại chatbot AI
-Dự án Hệ thống Website cửa hàng điện thoại tích hợp Chatbot AI hỗ trợ tư vấn khách hàng theo thời gian thực (Real-time Chat). Dự án được chia thành 3 service chính: Client (Frontend), Server (Backend API), và Socket (Real-time Server).
+# BÁO CÁO ĐỒ ÁN CƠ SỞ 2
 
-✨ Tính Năng Nổi Bật
-🛍️ Mua sắm & Quản lý Sản phẩm: Hiển thị danh sách sản phẩm, chi tiết sản phẩm (Điện thoại, ).
+## Thông tin sinh viên
+- **Họ và tên:** Nguyễn Rô Liêl
+- **MSSV:** 224499
+- **Lớp:** DH22KPM01
 
-🤖 Tích hợp AI Chatbot (RAG): Chatbot thông minh sử dụng mô hình học máy (@xenova/transformers) và Vector DB (ChromaDB) để trích xuất ngữ cảnh từ tài liệu (Chính sách bảo hành, Vận chuyển, Tư vấn sản phẩm) và tự động trả lời khách hàng.
+---
 
-💬 Chat Real-time: Kênh hỗ trợ trực tuyến giữa Khách hàng và Quản trị viên sử dụng Socket.IO.
+## Mục lục
+1. [Giới thiệu dự án](#1-giới-thiệu-dự-án)
+2. [Tài khoản đăng nhập dùng thử](#2-tài-khoản-đăng-nhập-dùng-thử)
+3. [Công nghệ sử dụng](#3-công-nghệ-sử-dụng)
+4. [Các chức năng chính](#4-các-chức-năng-chính)
+5. [Cấu trúc hệ thống và Thư mục](#5-cấu-trúc-hệ-thống-và-thư-mục)
+6. [Hướng dẫn cài đặt và chạy dự án](#6-hướng-dẫn-cài-đặt-và-chạy-dự-án)
+7. [API Endpoints cơ bản](#7-api-endpoints-cơ-bản)
+8. [Kiến trúc Mô hình Trí tuệ Nhân tạo (Chatbot RAG)](#8-kiến-trúc-mô-hình-trí-tuệ-nhân-tạo-chatbot-rag)
 
-👥 Quản lý Người dùng & Phân quyền: Hệ thống Roles (Admin, Staff, Customer/Client) với các quyền hạn khác nhau trên hệ thống.
+---
 
-📊 Báo cáo & Thống kê: Tính năng xuất dữ liệu báo cáo ra file Excel (.xlsx).
+## 1. Giới thiệu dự án
+Đây là hệ thống **Website Thương Mại Điện Tử (E-Commerce)** được tích hợp **Chatbot AI** hỗ trợ người dùng và hệ thống **Chat trực tuyến**. Dự án cung cấp cho người dùng các tính năng mua sắm, quản lý giỏ hàng, đặt hàng, thanh toán, cũng như phân hệ quản trị cửa hàng (quản lý sản phẩm, đơn hàng, thống kê) dành cho Admin. Điểm nổi bật là Chatbot AI sử dụng công nghệ LLM và kiến trúc RAG (Retrieval-Augmented Generation) để tự động hóa việc chăm sóc khách hàng và giải đáp thông tin sản phẩm.
 
-🛠️ Công Nghệ Sử Dụng
-Frontend (Client)
+## 2. Tài khoản đăng nhập dùng thử
+- **Email:** `nguyenliel29@gmail.com`
+- **Mật khẩu:** `admin123123`
+- **Vai trò:** Admin / User (Dùng tài khoản này để kiểm tra toàn bộ các tính năng nội bộ và quản trị của hệ thống).
 
-React.js
-Redux Toolkit (State Management)
-React Router DOM
-Socket.IO Client
-UI/UX: Bootstrap, CSS thuần, Ant Design
-Backend (Server)
+## 3. Công nghệ sử dụng
+Dự án được xây dựng theo mô hình kiến trúc Client-Server (Fullstack) với các công nghệ hiện đại:
 
-Node.js & Express.js
-Sequelize ORM (Quản lý CSDL MySQL)
-ExcelJS (Xuất file Excel)
-@xenova/transformers (Local Embedding cho Chatbot RAG)
-Real-time Server (Socket)
+### 3.1. Frontend (Client-side)
+- **Framework:** React.js (v18)
+- **State Management:** Redux Toolkit & React-Redux
+- **Routing:** React Router DOM (v6)
+- **UI & Styling:** Material-UI (MUI), Ant Design, Bootstrap, SASS, Emotion
+- **Trò chuyện trực tuyến (Real-time):** Socket.io-client
+- **Giao diện Chatbot AI:** React Chatbot Kit
+- **Thư viện hỗ trợ:** React-Slick (Carousel), Recharts (Vẽ biểu đồ thống kê), React Markdown (Hiển thị văn bản AI).
 
-Node.js & Socket.IO
-Database & AI Services
+### 3.2. Backend (Server-side)
+- **Môi trường & Framework:** Node.js, Express.js
+- **Cơ sở dữ liệu:** MySQL (Giao tiếp thông qua ORM Sequelize)
+- **AI & Vector Database (RAG):** Groq SDK, Llama-3.1-8b-instant, ChromaDB
+- **Xử lý Thời gian thực (Real-time):** Socket.io
+- **Xác thực & Bảo mật:** JSON Web Token (JWT), Bcrypt / Bcryptjs
+- **Lưu trữ Tệp / Hình ảnh:** Cloudinary (tích hợp với Multer)
+- **Gửi Email tự động:** Nodemailer
+- **Xử lý tệp tin tài liệu (Trích xuất text cho AI):** PDF-parse (PDF), Mammoth (Word/Docx), ExcelJS
 
-MySQL (Lưu trữ thông tin người dùng, sản phẩm, lịch sử chat)
-ChromaDB (Lưu trữ Vector Embeddings cho Chatbot)
+---
 
-📁 Cấu Trúc Dự Án
-text
-DoAn2/
-├── Client/                 # Frontend React App (Chạy trên port 3000)
-│   ├── public/             # CSS chung và assets
-│   └── src/
-│       ├── Layout/         # Components UI (BoxChat, Profile...)
-│       ├── redux/          # Redux slices (Quản lý trạng thái user, products)
-│       └── SocketProvider/ # Cấu hình Socket Context
-├── Server/                 # Backend RESTful API (Chạy trên port 8000)
-│   ├── src/
-│   │   ├── config/         # Cấu hình kết nối DB, Sequelize
-│   │   ├── migrations/     # File khởi tạo DB schema
-│   │   ├── models/         # Models của Sequelize
-│   │   ├── route/          # Định tuyến API (Excel, API Products...)
-│   │   └── services/       # Xử lý Logic (EmbeddingService,...)
-│   └── .sequelizerc        # Cấu hình đường dẫn cho Sequelize CLI
-├── Socket/                 # Real-time Chat Server (Chạy trên port 4000)
-│   └── index.js            # Khởi tạo Socket.IO và xử lý events
-└── Database_Scripts/       # Nơi chứa các file SQL init
-    └── chatbot_db_updates.sql
-    
-🚀 Hướng Dẫn Cài Đặt và Chạy Dự Án
-1. Yêu cầu hệ thống
-Node.js: (Khuyên dùng bản LTS)
-MySQL: Máy chủ cơ sở dữ liệu MySQL đang chạy.
+## 4. Các chức năng chính
+*(Các chức năng nghiệp vụ E-commerce cơ bản bao gồm mua hàng, đặt hàng, kiểm duyệt đơn, đăng nhập, phân quyền, quản trị sản phẩm, thống kê doanh thu, v.v.)*
 
-2. Thiết lập Database
-Mở MySQL client của bạn (như MySQL Workbench, phpMyAdmin).
-Tạo database mới cho dự án.
-Chạy các script SQL có sẵn trong file chatbot_db_updates.sql để khởi tạo các bảng (knowledges, roles, chat_histories...) và nạp dữ liệu mẫu.
-Cập nhật thông tin kết nối Database vào file Server/src/config/config.json.
+---
 
-3. Cài đặt Server Backend (Port 8000)
-bash
-cd Server
+## 5. Cấu trúc hệ thống và Thư mục
+```text
+Đồ án 2/
+├── backend/                  
+│   ├── src/                  
+│   │   ├── controllers/      # (ChatbotController, KnowledgeController...)
+│   │   ├── services/         # Nơi chứa logic AI (ChatbotService, KnowledgeService...)
+│   │   └── ...
+│   └── my_chroma_db/         # Thư mục lưu Vector Database nội bộ (Embeddings)
+└── frontend/                 
+    └── src/                  
+        ├── Layout/           
+        └── SocketProvider/   # Kết nối Socket.io với Node server
+```
+
+---
+
+## 6. Hướng dẫn cài đặt và chạy dự án
+
+### Bước 1: Khởi chạy Database và Vector DB
+- Server sử dụng MySQL cho dữ liệu quan hệ (Người dùng, Đơn hàng, Sản phẩm...).
+- Vectơ dữ liệu RAG được thiết lập tự động lưu tại Folder nội bộ `my_chroma_db` (ChromaDB Local).
+
+### Bước 2: Chạy Backend
+```bash
+cd backend
 npm install
 npm start
-
-4. Cài đặt Server Socket (Port 4000)
-bash
-cd Socket
+# Port mặc định thường là 8000
+```
+### Bước 3: Chạy Frontend
+```bash
+cd frontend
 npm install
 npm start
+# Frontend chạy tại http://localhost:3000
+```
 
-5. Cài đặt Frontend Client (Port 3000)
-bash
-cd Client
-npm install
-npm start
+---
 
-💡 Cấu Trúc Database Cốt Lõi (Chatbot & Users)
-knowledges & knowledge_chunks: Lưu trữ tài liệu kiến thức (txt, pdf, docx) và phân mảnh (chunk) văn bản phục vụ cho Embedding.
-chat_histories: Lưu trữ phiên hỏi đáp và thời gian phản hồi của chatbot AI.
-roles & user_roles: Đảm nhiệm việc phân quyền người dùng. Hệ thống hỗ trợ Admin, Staff và Customer.
-Message: Lưu trữ tin nhắn Real-time.
+## 7. API Endpoints cơ bản
+- `/api/userRouter`: Quản lý Auth, Profile.
+- `/api/ProductRouter`: Các API lấy danh sách, chi tiết, thêm, sửa, xóa sản phẩm.
+- `/api/OderRouter`: Quản lý quy trình đặt hàng.
+- `/api/chatbot/ask`: API gửi câu hỏi cho trợ lý LLM.
+- `/api/knowledge/upload`: Kênh nạp tài liệu cho AI học (Upload knowledge).
 
-👨‍💻 Tác giả / Nhóm Đồ án
-Phát triển bởi Nguyễn Rô Liêl 224499 phục vụ Đồ án 2 và học thuật mở về hệ thống thương mại điện tử chuyên cung cấp thiết bị công nghệ (điện thoại, ). Vui lòng tham khảo mã nguồn các thành phần cốt lõi như hệ thống Trợ lý ảo AI Chatbot (RAG với ChromaDB & Groq), tính năng Live Chat Real-time (Socket.IO) và quản lý trạng thái giỏ hàng (Redux Toolkit) ở lịch sử Commit chi tiết.
+---
+
+## 8. Kiến trúc Mô hình Trí tuệ Nhân tạo (Chatbot RAG) - Dành cho chấm điểm AI
+
+Hệ thống Chatbot không sử dụng những câu lệnh if/else truyền thống mà được xây dựng trên một quy trình **Trí tuệ Nhân tạo hiện đại** sử dụng **Mô hình Ngôn ngữ Lớn (LLM)** kết hợp với kiến trúc **RAG (Retrieval-Augmented Generation)** nhằm giải quyết vấn đề Hallucination (Ảo giác AI) và giúp Chatbot tư vấn chính xác dựa trên dữ liệu cửa hàng.
+
+### 8.1. Các thành phần AI cốt lõi
+1. **Large Language Model (LLM):** Sử dụng hệ sinh thái của **Groq (Groq SDK)** với Model Lõi là **`llama-3.1-8b-instant`**. Mô hình này cung cấp tốc độ phản hồi tính bằng mili-giây và khả năng hiểu ngôn ngữ tự nhiên (Tiếng Việt) cực tốt.
+2. **Vector Database:** Sử dụng **ChromaDB**. Đây là một cơ sở dữ liệu véc-tơ cục bộ, lưu trữ các chuỗi "Embeddings" (biểu diễn dạng số của văn bản) giúp thuật toán dễ dàng tính toán khoảng cách vector và tìm kiếm câu trả lời nhanh nhất.
+3. **Data Extractors:** Thư viện **PDF-parse** và **Mammoth**, có khả năng trích xuất nội dung từ các file `PDF`, `Docx`, và `TXT` được Admin nạp vào hệ thống để AI "học".
+
+### 8.2. Quy trình "Nạp Học liệu" (Knowledge Ingestion Workflow)
+Để AI biết hệ thống đang bán gì, quy định đổi trả ra sao, quá trình Data Ingestion diễn ra qua các bước (Xử lý tại file `KnowledgeService.js`):
+- **Bước 1 (Parse Data):** Người Quản trị (Admin) nạp tài liệu (ví dụ: Chính sách cửa hàng.pdf). Hệ thống dùng `pdf-parse` để bóc tách thô tài liệu thành đoạn văn bản dài (Raw Text).
+- **Bước 2 (Text Chunking):** Tránh việc nhồi nhét quá giới hạn của LLM, văn bản được "băm" (chunk) ra thành các đoạn ngắn. Thuật toán Chunking tiến hành đếm ký tự (`chunkSize = 500`), với độ chồng lấp ranh giới phần trước và sau `overlap = 100` để không làm đứt gãy mạch ngữ nghĩa. Ở những điểm giao cắt, thuật toán có cơ chế ưu tiên ngừng tại dấu chấm kết câu (end of sentence).
+- **Bước 3 (Embedding Generation):** Từng đoạn Chunk này được gửi đến API để chuyển từ "Văn tự con người" thành "Biểu diễn số học của máy" (Embeddings/Vectors tuyến tính).
+- **Bước 4 (Vector Store):** Các Vectors này được đính kèm theo khóa phân cực (UUID) và Metadata (Tên tài liệu gốc, danh mục) sau đó lưu cứng vào **ChromaDB**.
+
+### 8.3. Quy trình Trả lời Truy vấn (RAG Query Workflow)
+Quá trình này bộc lộ rõ sức mạnh của RAG (Xử lý tại `ChatbotService.js`):
+- **Bước 1 (Query Embedding):** Khách hàng đặt câu hỏi: *"Chính sách bảo hành như thế nào?"*. Câu hỏi lập tức được biến đổi thành một Vector Query theo cùng hệ tham chiếu với cơ sở dữ liệu ở bước nạp liệu.
+- **Bước 2 (Semantic Search):** Hệ thống tìm kiếm bên trong không gian ChromaDB để bắt lấy **Top 5** đoạn text sát nghĩa nhất (`docs = searchResults.documents[0]`). Việc tìm kiếm diễn ra thông qua thuật toán đo khoảng cách tương đồng tuyến tính của 2 Vector (Distance Calculation). 
+- **Bước 3 (Prompt Engineering):** Server Backend tự xây dựng một Prompt Kịch bản ngầm: *"Bạn là trợ lý ảo AI... Hãy trả lời dựa trên KIẾN THỨC CUNG CẤP BÊN DƯỚI..."*. Đồng thời, hệ thống nhúng chính xác 5 đoạn tài liệu văn bản vừa bắt được ở bước trên vào để "Vạch mặt chỉ tên" kiến thức cho đồ thị thông minh.
+- **Bước 4 (LLM Completion):** Lời nhắc cuối cùng được đẩy lên hệ thống Compute của **Groq (Chạy Model LLaMA 3.1)** qua API. AI tổng hợp tài liệu được dán ở bước 3, hiểu câu hỏi của user và tiến hành suy diễn sinh ra (Generative) câu trả lời tiếng Việt chính xác, thân thiện, không bị "Ảo giác" đoạch ra ngoài phạm vi thông tin cửa hàng.
+- **Bước 5 (Database Logging & Feedback):** Câu hỏi, Câu trả lời, Nguồn tài liệu gốc (Sources references), và Thời gian phản hồi đều được truy vết và lưu vào DB `ChatHistories`. Admin dễ dàng thống kê và tinh chỉnh cấu trúc trả lời trong tương lai.
